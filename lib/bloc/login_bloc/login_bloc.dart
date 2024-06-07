@@ -10,6 +10,8 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     on<ChangePasswordVisibility>(_handlePassowrdVisibility);
   }
   _handlePassowrdVisibility(event, emit) {
-    emit(ValidLogin(showPassword: !validLoginState.showPassword));
+    emit(ValidLogin(
+      showPassword: !validLoginState.showPassword,
+    ));
   }
 }
